@@ -1,0 +1,35 @@
+.home-page {
+  text-align: center;
+  margin: auto;
+  color: white;
+  background-image: url("../images/mvp-banner.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.home-page > h1 {
+  font-family: "Barlow", sans-serif;
+  padding-top: 3%;
+  font-size: 45px;
+  width: 30vw;
+  margin: auto;
+}
+
+#order-pizza {
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 15px;
+
+  margin: auto;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  border-radius: 22px;
+  background-color: yellow;
+  border: 0px;
+}
