@@ -70,7 +70,7 @@ const OrderForm = () => {
       if (order.extra.includes(value)) {
         setOrder({
           ...order,
-          extra: order.extra.filter(item => item == value),
+          extra: order.extra.filter(item => item !== value),
         });
       } else {
         setOrder({ ...order, extra: [...order.extra, value] });
@@ -98,12 +98,9 @@ const OrderForm = () => {
   }, [order.extra]);
 
   useEffect(() => {
-    formSchema.isValid(order).then(valid => setValid(!valid));
+    formSchema.isValid(order).then(valid => setValid(valid));
     setExtraPrice(order.extra.length * 5);
     setTotalPrice((firstPrice + order.extra.length * 5) * count);
-  }, [order]);
-
-  useEffect(() => {
     console.log(order);
   }, [order]);
 
